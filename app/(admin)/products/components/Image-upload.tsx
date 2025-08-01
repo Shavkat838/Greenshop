@@ -1,6 +1,6 @@
 "use client"
 import { BASE_IMAGE_URL } from "@/helpers/types";
-import { getFormData, getImage, imageLoadingFinish, imageLoadingStart } from "@/redux/slices/productSlice";
+import {  getImage, imageLoadingFinish, imageLoadingStart } from "@/redux/slices/productSlice";
 import { createClient } from "@/utils/supabase/client";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";

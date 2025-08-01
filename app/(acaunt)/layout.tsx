@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import UserSidebar from "./_components/userSidebar";
-import MobileHeader from "../_Header/mobile-header";
 import Mobileheader from "./_components/mobile_header";
 
 

@@ -3,7 +3,7 @@ import { filterCategory } from '@/redux/slices/categorySlice';
 import { searchProduct } from '@/redux/slices/productSlice';
 import { getId, setVisible } from '@/redux/slices/userSlice';
 import { AppDispatch, RootState } from '@/redux/store';
-import React, { useState } from 'react'
+import React from 'react'
 import { CiLogin, CiLogout } from 'react-icons/ci';
 import { IoMdSearch } from 'react-icons/io';
 import { useSelector } from 'react-redux';
@@ -25,8 +25,8 @@ export default function MobileHeader() {
         <input
           value={searchValue}
           onChange={(e) => {
-            dispatch(searchProduct(e.target.value)),
-              dispatch(filterCategory(-1));
+            dispatch(searchProduct(e.target.value))
+            dispatch(filterCategory(-1));
           }}
           type="search"
           className="max-w-[313px] w-full h-[100%]  pl-[50px] placeholder:text-[#A5A5A5] placeholder:text-[14px] placeholder:font-normal placeholder:leading-[16px]  "
@@ -35,9 +35,12 @@ export default function MobileHeader() {
       </div>
       <button
         onClick={() =>{
-          !localStorage.getItem("id") ? dispatch(setVisible(true)):
-           localStorage.removeItem("id"),
-           dispatch(getId())
+          if (!localStorage.getItem("id")) {
+            dispatch(setVisible(true));
+          } else {
+            localStorage.removeItem("id");
+            dispatch(getId());
+          }
         }}
         className="w-[45px] h-[45px]  cursor-pointer  font-medium  bg-[#46A358] rounded-[14px] flex items-center justify-center"
       >

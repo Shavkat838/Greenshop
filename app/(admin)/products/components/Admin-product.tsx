@@ -15,7 +15,7 @@ import { useDispatch } from 'react-redux';
 export default function AdProduct({price,images,name,id,description,categoryId}:Products) {
 
 
-  const {isDeleteError,isDeleteLoading,formData}=useSelector((state:RootState)=>state.productsSlice)
+  const {isDeleteError,isDeleteLoading,}=useSelector((state:RootState)=>state.productsSlice)
   const dispatch=useDispatch<AppDispatch>()
  
    useEffektHooks(isDeleteLoading,isDeleteError);

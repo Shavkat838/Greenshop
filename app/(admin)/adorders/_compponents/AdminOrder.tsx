@@ -6,7 +6,6 @@ import React, { useState } from 'react'
 import { CgSpinner } from 'react-icons/cg';
 import { FaRegUser } from 'react-icons/fa'
 import { MdOutlinePhone } from 'react-icons/md'
-import { SiPinboard } from 'react-icons/si';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 

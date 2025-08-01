@@ -2,7 +2,6 @@
 import useEffektHooks from "@/helpers/functions";
 import { AppDispatch, RootState } from "@/redux/store";
 import { Users } from "@prisma/client";
-import Image from "next/image";
 import { useState } from "react";
 import { FaSpinner } from "react-icons/fa";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
@@ -16,25 +15,25 @@ type Props={
 
 
 export default function UserComponent({data}:Props) {
-
-    const id=localStorage.getItem("id")&&localStorage.getItem("id");
-    const currentUser=data.find((c)=>c.id===parseInt(id!))
-    if(!currentUser){
-      return <>User topilmadi...</>
-    }
-    const [phone,setPhone]=useState(currentUser.phone)
-    const [photo,setPhoto]=useState("")
-    const [firstname,setFirstname]=useState(currentUser.firstname)
-    const [lastname,setLastname]=useState(currentUser.lastname)
-    const [lastpassword,setLastpassword]=useState("")
-    const [newpassword,setNewpassword]=useState("")
-    const [newpasswordrepaet,setNewpasswordrepaet]=useState("")
-    const [username,setUsername]=useState(currentUser.username)
-    const [close,setClose]=useState(false)
-
-    const dispatch=useDispatch<AppDispatch>()
-    const {editLoading,editError}=useSelector((state:RootState)=>state.users)
-    useEffektHooks(editLoading,editError)
+          const { editLoading, editError } = useSelector(
+            (state: RootState) => state.users
+          );
+        useEffektHooks(editLoading,editError)
+        const id = localStorage.getItem("id") && localStorage.getItem("id");
+        const currentUser = data.find((c) => c.id === parseInt(id!));
+        const [phone, setPhone] = useState(currentUser!.phone);
+        const photo = "";
+        const [firstname, setFirstname] = useState(currentUser!.firstname);
+        const [lastname, setLastname] = useState(currentUser!.lastname);
+        const [lastpassword, setLastpassword] = useState("");
+        const [newpassword, setNewpassword] = useState("");
+        const [newpasswordrepaet, setNewpasswordrepaet] = useState("");
+        const [username, setUsername] = useState(currentUser!.username);
+        const [close, setClose] = useState(false);
+        const dispatch = useDispatch<AppDispatch>();
+                if (!currentUser) {
+                  return <>User topilmadi...</>;
+                }
 
    function updateData(){
     if(lastname===""||firstname===""||lastpassword===""||newpassword===""||newpasswordrepaet===""||phone===""){
