@@ -22,8 +22,12 @@ export default function Mobilecategory({ categories }: Props) {
       {categories.map((item, index) => (
         <p
           onClick={() =>{
-           if (filteredId === item.id){ dispatch(filterCategory(-1))}else
-              {dispatch(filterCategory(item.id)), dispatch(searchProduct(""))}
+           if (filteredId === item.id){
+             dispatch(filterCategory(-1))
+            }else
+            {dispatch(filterCategory(item.id))
+                 dispatch(searchProduct(""))
+            }
            } }
           key={index + 1}
           className={` ${

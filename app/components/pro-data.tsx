@@ -81,7 +81,7 @@ const dispatch=useDispatch<AppDispatch>()
                 <input
                   value={searchValue}
                   onChange={(e) => {
-                    dispatch(searchProduct(e.target.value)),
+                       dispatch(searchProduct(e.target.value))
                       dispatch(filterCategory(-1));
                   }}
                   type="search"
