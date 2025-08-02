@@ -1,4 +1,4 @@
-export default function AccPage() {
+export default function Page() {
   return (
     <div>
       BU admin sahifasi
