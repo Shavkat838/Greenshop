@@ -11,6 +11,6 @@ export async function PUT(req:NextRequest,{params}:{params:Promise<{id:string}>}
     })
     return NextResponse.json(updatedCategory,{status:200})
  } catch (error) {
-    return new NextResponse("Edit qilishda xatolik",{status:500})
+    return new NextResponse(`Edit qilishda xatolik${error+""}`,{status:500})
  }   
 }

@@ -11,6 +11,6 @@ export async function PUT(req:NextRequest,{params}:{params:Promise<{id:string}>}
        }
        return NextResponse.json(orders,{status:201})
     } catch (error) {
-        return new NextResponse("Internal server error",{status:500})
+        return new NextResponse(`Internal server error${error+""}`,{status:500})
     }
 }

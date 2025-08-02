@@ -5,7 +5,7 @@ import { getFormData } from '@/redux/slices/orderSlice';
 import { AppDispatch, RootState } from '@/redux/store';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import React, { useEffect } from 'react'
+import React from 'react'
 import { FaSpinner } from 'react-icons/fa';
 import { IoChevronBackOutline } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';

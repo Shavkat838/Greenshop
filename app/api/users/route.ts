@@ -18,7 +18,7 @@ export async function POST(request:NextRequest){
          });
          return NextResponse.json(users,{status:201})
     } catch (error) {
-        return new NextResponse("Qoshishda xatolik",{status:500})
+        return new NextResponse(`Qoshishda xatolik${error+""}`,{status:500})
     }
 }
 
@@ -41,6 +41,6 @@ export async function GET(req:NextRequest){
     }
     return NextResponse.json(users,{status:200})
   } catch (error) {
-    return new NextResponse("Get so`rovida xatolik",{status:500})
+    return new NextResponse(`Get so'rovida xatolik${error+""}`,{status:500})
   }
 }

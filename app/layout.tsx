@@ -10,8 +10,7 @@ import HyProvider from "./hydretionProvider";
 import SignINModal from "./components/Rodal-component";
 import SignUpModal from "./components/SignUp-rodal";
 import prisma from "@/lib/db";
-import MobileHeader from "./_Header/mobile-header";
-import Mobilefooter from "./_Footer/mobile-footer";
+
 
 const poppins=Poppins({
   subsets:["latin"],

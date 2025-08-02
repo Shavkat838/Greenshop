@@ -29,7 +29,7 @@ const products=await prisma.products.findMany();
             WELCOME TO GREENSHOP
           </p>
           <h1 className=" text-[24px]  sm:text-[70px] max-w-[530px] w-full sm:mt-[10px] leading-[29px] sm:leading-[80px] font-black text-[#3D3D3D] ">
-            LET'S MAKE A BETTER
+            LET`S MAKE A BETTER
             <span className="text-[#46A358]">PLANET</span>
           </h1>
           <p className="font-normal max-w-[557px] w-full line-clamp-2  mt-[3px] sm:mt-[15px] text-[12px] sm:text-[14px] leading-[18px] sm:leading-[21px] text-[#727272]">

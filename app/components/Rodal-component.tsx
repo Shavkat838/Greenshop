@@ -96,11 +96,11 @@ useEffect(()=>{
             >
               <div className="w-full h-[16px]">
                 <h1 className="text-[20px] text-center leading-[16px] text-[#46A358] font-medium">
-                  Ro'yxatdan o'ting
+                  Ro`yxatdan o`ting
                 </h1>
               </div>
               <p className="mt-[45px]  text-[13px] leading-[16px] font-normal text-[#3D3D3D]">
-                Ro'yxatdan o'tish uchun email va parolingizni kiriting
+                Ro`yxatdan o`tish uchun email va parolingizni kiriting
               </p>
               <div className="flex flex-col w-full items-center gap-[12px] mt-[10px] ">
                 <input

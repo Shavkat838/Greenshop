@@ -12,7 +12,7 @@ export async function DELETE(req:NextRequest,{params}:{params:Promise<{id:string
         });  
         return NextResponse.json(deletedProduct,{status:200})       
     } catch (error) {
-         return new NextResponse("Deleted error",{status:500})
+         return new NextResponse(`Deleted error${error+""}`,{status:500})
     }
 }
 
@@ -35,6 +35,6 @@ export async function PUT(req:NextRequest,{params}:{params:Promise<{id:string}>}
   })
   return NextResponse.json(editProduct,{status:200})
  } catch (error) {
-  return new NextResponse("Internal server error",{status:500})
+  return new NextResponse(`Internal server error${error+""}`,{status:500})
  }
 }

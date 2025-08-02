@@ -43,11 +43,11 @@ const dispatch=useDispatch<AppDispatch>()
             ) : (
               categories.map((item) => (
                 <div
-                  onClick={() =>
-                    filteredId === item.id
-                      ? dispatch(filterCategory(-1))
-                      : dispatch(filterCategory(item.id))
-                  }
+                  onClick={() =>{
+                    if(filteredId === item.id){
+                      dispatch(filterCategory(-1))}else{
+                      dispatch(filterCategory(item.id))}
+                  }}
                   key={item.id}
                   className="max-w-full  flex justify-between cursor-pointer group items-end h-[40px]"
                 >

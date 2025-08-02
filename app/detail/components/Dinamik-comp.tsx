@@ -1,7 +1,7 @@
 "use client"
 import Carousel from "@/app/components/mobile-carousel";
 import { likeProductsRefresh } from "@/helpers/functions";
-import { handleQuantity, saveCart } from "@/redux/slices/cartSlice";
+import {  saveCart } from "@/redux/slices/cartSlice";
 import { saveLike } from "@/redux/slices/likesSlice";
 import { RootState } from "@/redux/store";
 import { Products } from "@prisma/client";
