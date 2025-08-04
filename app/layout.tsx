@@ -8,9 +8,9 @@ import Providers from "./providers";
 import { ToastContainer } from "react-toastify";
 import TopLoader from "./components/TopLoader";
 import HyProvider from "./hydretionProvider";
-import SignINModal from "./components/Rodal-component";
 import SignUpModal from "./components/SignUp-rodal";
-import prisma from "@/lib/db";
+
+
 
 
 const poppins=Poppins({
