@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Image from "next/image";
 import Product from "./components/Product";
 import prisma from "@/lib/db";
@@ -8,16 +9,13 @@ import Mobilefooter from "./_Footer/mobile-footer";
 import MobileHeader from "./_Header/mobile-header";
 import Mobileproducts from "./components/mobile-products";
 
-
-
 export default async function Home() {
-const products=await prisma.products.findMany();
+  const products = await prisma.products.findMany();
   const categories = await prisma.category.findMany({
     include: {
       product: true,
     },
   });
-
 
   return (
     <div className="max-w-[366px] sm:max-w-[1200px]  w-full flex flex-col mx-auto items-center">
