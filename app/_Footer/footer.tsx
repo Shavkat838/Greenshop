@@ -1,7 +1,11 @@
-import Image from 'next/image';
-import React from 'react'
+export const dynamic = "force-dynamic";
+import prisma from "@/lib/db";
+import Image from "next/image";
+import React from "react";
+import SignINModal from "../components/Rodal-component";
 
-export default function Footer() {
+export default async function Footer() {
+    const users = await prisma.users.findMany();
   return (
     <div className="max-w-[1200px] hidden  bg-[#FBFBFB]  w-full min-h-[610px] mt-[100px] sm:flex flex-col mx-auto">
       <div className="max-w-[1200px] w-full h-[250px]  flex items-center justify-center">
@@ -221,7 +225,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div  >
+        <div>
           <h1 className="text-[18px] leading-[16px] text-[#3D3D3D] font-bold ">
             Social media
           </h1>
@@ -260,19 +264,23 @@ export default function Footer() {
                 />
               </div>
               <div className="w-[30px] h-[30px] rounded-[4px]  border border-[#46A35833]  flex items-center justify-center ">
-                <Image
-                  src={"/camera.svg"}
-                  alt="photo"
-                  width={18}
-                  height={13}
-                />
+                <Image src={"/camera.svg"} alt="photo" width={18} height={13} />
               </div>
             </div>
-            <h1 className=' text-[18px] leading-[16px] mt-[40px] text-[#3D3D3D] font-bold'  >We accept</h1>
-            < Image className='mt-[13px]' src={'/carta.svg'} alt='photo' width={224} height={26}/>
+            <h1 className=" text-[18px] leading-[16px] mt-[40px] text-[#3D3D3D] font-bold">
+              We accept
+            </h1>
+            <Image
+              className="mt-[13px]"
+              src={"/carta.svg"}
+              alt="photo"
+              width={224}
+              height={26}
+            />
           </div>
         </div>
       </div>
+      <SignINModal users={users} />;
     </div>
   );
 }

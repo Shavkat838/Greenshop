@@ -1,11 +1,11 @@
+export const dynamic = "force-dynamic";
 import prisma from "@/lib/db";
 import OrderComponent from "./_components/OrderPage";
 import { Product } from "@/helpers/types";
 
-
-interface orderItem{
-  product:Product
-  quantity:number,
+interface orderItem {
+  product: Product;
+  quantity: number;
 }
 
 type OrdersType = {
@@ -20,10 +20,8 @@ type OrdersType = {
   userId: number;
 }[];
 
-
-export default  async function OrderPage() {
-
-  const ordersForm=await prisma.orders.findMany()
+export default async function OrderPage() {
+  const ordersForm = await prisma.orders.findMany();
 
   const orders: OrdersType = ordersForm.map((item) => ({
     ...item,
@@ -34,8 +32,10 @@ export default  async function OrderPage() {
       phone: string;
     },
   }));
-  
+
   return (
-    <div><OrderComponent data={orders} /></div>
-  )
+    <div>
+      <OrderComponent data={orders} />
+    </div>
+  );
 }

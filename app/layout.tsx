@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import {Poppins } from "next/font/google";
 import "./globals.css";
@@ -28,8 +29,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>){
-
-  const users= await prisma.users.findMany();
   return (
     <html lang="en">
       <body className={` ${poppins.className} antialiased`}>
@@ -45,7 +44,6 @@ export default async function RootLayout({
                 <Footer />
               </div>
             </div>
-            <SignINModal users={users} />;
             <SignUpModal />
           </Providers>
         </HyProvider>
