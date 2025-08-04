@@ -12,7 +12,6 @@ type CategoryProps = {
 export default function CatData({ data }: CategoryProps) {
   const dispatch = useDispatch<AppDispatch>();
 
-  console.log("Kelgan categoriyalar:", data);
 
   if (!data) {
     return <h1 className="2xl">Loading...</h1>;
