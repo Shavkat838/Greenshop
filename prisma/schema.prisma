@@ -42,6 +42,7 @@ model Users {
     phone String
     username String
     orders Orders[]
+    role String @default("user")
 }
 
 
