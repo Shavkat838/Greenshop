@@ -56,7 +56,8 @@ const userSlice=createSlice({
          state.saveLoading=true
         },
         saveUserSuccess:(state,action)=>{
-           localStorage.setItem("id",action.payload)
+           localStorage.setItem("id",action.payload.id)
+           localStorage.setItem("role",action.payload.role)
            state.localId=action.payload;
            state.saveLoading=false,
            state.saveError=null

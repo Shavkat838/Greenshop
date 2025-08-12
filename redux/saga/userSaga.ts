@@ -1,6 +1,6 @@
 import { put, takeEvery } from "redux-saga/effects";
 import { editUersuccess, editUserError, editUserStart, getUsersError, getUsersSuccess, getUserstart, saveUserStart, saveUserSuccess } from "../slices/userSlice";
-import axios, { AxiosError } from "axios";
+import axios  from "axios";
 import { saveProductError } from "../slices/productSlice";
 import { toast } from "react-toastify";
  
@@ -16,6 +16,7 @@ type Users = {
     photo: string;
     email: string;
     password: string;
+    role:string;
   };
 };
 
@@ -50,7 +51,7 @@ function* workSaveUser(action: SaveActiontype) {
     if(!users){
       return 
     }
-    yield put(saveUserSuccess(users.data.id));
+    yield put(saveUserSuccess(users.data));
   } catch (error: unknown) {
     yield put(saveProductError(error));
   }
