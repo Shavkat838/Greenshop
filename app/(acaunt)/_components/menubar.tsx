@@ -47,10 +47,10 @@ export default function Menubar() {
       <button className="max-w-[78px] w-full cursor-pointer mt-[10px]  h-[20px] flex justify-between items-center">
         <CiLogin size={20} className="text-[#46A358]" />
         <p    onClick={() => {
+                      router.push("/");
                       localStorage.removeItem("id");
                       localStorage.removeItem("role")
                       dispatch(getId())
-                      router.push("/")
         }} className="text-[15px] leading-[15px]  font-bold text-[#46A358]">
           Loguot
         </p>
