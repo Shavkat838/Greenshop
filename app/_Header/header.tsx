@@ -26,26 +26,24 @@ const userPage=["/adress","/orders",'/users',"/wishlist","/shop"]
 
 
 
+
+
+
 useEffect(()=>{
-  if(!localStorage.getItem("id")){
-    if(localStorage.getItem("admin")){
-      return
-    }
-    checkUser()
-  }
+const role=localStorage.getItem("role")
+if(role===null){
+  checkUser()
+}
 },[pathname])
+
 
 
 function checkUser(){
   if(userPage.includes(pathname)){
-    router.push("/")
+    router.replace("/")
     return
   }
 }
-
-
-
-
 
 
 
@@ -132,6 +130,7 @@ function checkUser(){
           <button
             onClick={() => {
               localStorage.removeItem("id");
+              localStorage.removeItem("role");
               dispatch(getId())
               router.push("/")
             }}

@@ -13,7 +13,6 @@ import { useDispatch } from 'react-redux';
 export default function MobileHeader() {
   const {searchValue}=useSelector((state:RootState)=>state.productsSlice)
   const {localId}=useSelector((state:RootState)=>state.users)
-  
   const dispatch=useDispatch<AppDispatch>()
 
 
@@ -39,6 +38,7 @@ export default function MobileHeader() {
             dispatch(setVisible(true));
           } else {
             localStorage.removeItem("id");
+            localStorage.removeItem("role")
             dispatch(getId());
           }
         }}

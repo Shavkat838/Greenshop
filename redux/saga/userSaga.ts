@@ -1,5 +1,5 @@
 import { put, takeEvery } from "redux-saga/effects";
-import { editUersuccess, editUserError, editUserStart, getUsersError, getUsersSuccess, getUserstart, saveUserStart, saveUserSuccess } from "../slices/userSlice";
+import { editUsersuccess, editUserError, editUserStart, getUsersError, getUsersSuccess, getUserstart, saveUserStart, saveUserSuccess } from "../slices/userSlice";
 import axios  from "axios";
 import { saveProductError } from "../slices/productSlice";
 import { toast } from "react-toastify";
@@ -70,7 +70,7 @@ try {
     toast.error("Kiritgan email yoki parol xato")  
     return
   }
-  yield put(getUsersSuccess(users.data.id))
+  yield put(getUsersSuccess(users.data))
 } catch (error:any) {
   if(error.response.status===404){
         toast.error("Siz hali ro`yxatdan otmagansiz");
@@ -85,7 +85,7 @@ function* workPutUser(action:SaveActiontype){
 try {
   yield put(editUserStart())
   yield axios.put(`/api/users/${action.payload.id}`,action.payload)
-  yield put(editUersuccess())
+  yield put(editUsersuccess())
 } catch (error) {
   yield put(editUserError(error+""))
 }

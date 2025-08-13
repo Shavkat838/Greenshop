@@ -48,6 +48,7 @@ export default function UserSidebar() {
         <CiLogin size={20} className="text-[#46A358]" />
         <p    onClick={() => {
                       localStorage.removeItem("id");
+                      localStorage.removeItem("role")
                       dispatch(getId())
                       router.push("/")
         }} className="text-[15px] leading-[15px]  font-bold text-[#46A358]">

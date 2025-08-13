@@ -72,7 +72,8 @@ const userSlice=createSlice({
             state.getLoading=true
         },
         getUsersSuccess:(state,action)=>{
-           localStorage.setItem("id",action.payload)
+           localStorage.setItem("id",action.payload.id)
+           localStorage.setItem("role",action.payload.role)
            state.localId=action.payload;
            state.getLoading=false;
            state.getError=null;
@@ -84,7 +85,7 @@ const userSlice=createSlice({
         editUserStart:(state)=>{
            state.editLoading=true
         },
-        editUersuccess:(state)=>{
+        editUsersuccess:(state)=>{
             state.editLoading=false;
             state.editError=null
         },
@@ -97,4 +98,4 @@ const userSlice=createSlice({
 
 
 export default userSlice.reducer;
-export const  {setVisible,saveUserError,saveUserStart,editUersuccess, editUserError, editUserStart,saveUserSuccess,setloginVisible,getId,getUsersError, getUsersSuccess,getUserstart}=userSlice.actions;
+export const  {setVisible,saveUserError,saveUserStart,editUsersuccess, editUserError, editUserStart,saveUserSuccess,setloginVisible,getId,getUsersError, getUsersSuccess,getUserstart}=userSlice.actions;

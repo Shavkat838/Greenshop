@@ -72,8 +72,8 @@ useEffect(()=>{
       phone:"",
       photo:"",
      }
-    dispatch({ type: "SAVE/USER", payload: obj });  
-    router.push("/users")
+    dispatch({ type: "SAVE/USER", payload: obj }); 
+    router.push("/users");
  }
 
     if(!visible){

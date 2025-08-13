@@ -49,8 +49,6 @@ export default function ProductForm({categories}:CategoryProps) {
       categoryId: formData.categoryId,
       images: formData.images,
     };
-
-    console.log(formData.images);
     if (editCategoryId === -1) {
       dispatch({ type: "PRODUCT/SAVE", payload: data });
     } else {
@@ -63,7 +61,6 @@ export default function ProductForm({categories}:CategoryProps) {
     dispatch(clearFormData());
   }
 
-  // https://utsgnlwgurhfevqnupci.storage.supabase.co/v1/object/public/greenpro//images_1753421807151
 
   async function imageDelete(index: number) {
     dispatch(oneImageDelete(index));
