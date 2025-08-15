@@ -44,8 +44,8 @@ const dispatch=useDispatch<AppDispatch>()
   }
   
   return (
-    <div className={`card shadow-md  sm:mt-0 max-w-[175px] ${index%2===0?"mt-0":"mt-[31px]"}  sm:max-w-[258px] sm:hover:border-t-2 sm:hover:border-t-[#46A358]  p-2  w-full h-[245px] sm:h-[350px] flex flex-col }`}>
-      <div className="max-w-[258px] w-full  relative  h-[300px] flex items-center justify-center bg-[#FBFBFB] group">
+    <div className={`card shadow-md  sm:mt-0 max-w-[175px] ${index%2===0?"mt-0":"mt-[31px]"}  sm:max-w-[258px] sm:hover:border-t-2 sm:hover:border-t-[#46A358]  p-2 mb-2  w-full h-[245px] sm:h-[350px] flex flex-col }`}>
+      <div className="max-w-[258px] w-full  relative  h-[300px] flex items-center justify-center group">
         <Link
           className="w-full h-full flex items-center justify-center"
           href={`detail/${id}`}
