@@ -35,7 +35,6 @@ export default function Carousel({ images }: Props) {
                 className="w-[100%] h-[100%] "
                 width={356}
                 height={356}
-                unoptimized
               />
             </div>
           </SwiperSlide>

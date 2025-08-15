@@ -45,7 +45,6 @@ useEffect(()=>{
             width={100}
             height={100}
             className="sm:w-[70px] h-[90px] sm:h-[70px]  "
-            unoptimized
           />
           <div className="ml-[14px]  flex flex-col   h-[80px]   sm:h-[70px] sm:justify-center justify-between   gap-0  sm:gap-[6px]">
             <h1 className="text-[15px] sm:text-[16px] leading-[16px] text-[#3D3D3D] font-medium">

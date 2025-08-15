@@ -183,7 +183,6 @@ export default function ProductForm({categories}:CategoryProps) {
                 width={60}
                 height={60}
                 className="w-[100] h-[100]"
-                unoptimized
               />
               <IoClose
                 onClick={() => imageDelete(index)}

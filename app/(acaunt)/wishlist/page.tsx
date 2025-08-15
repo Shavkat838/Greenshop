@@ -42,7 +42,6 @@ export default function WishlistPage() {
                 width={250}
                 height={250}
                 className="w-[90%] h-[95%] cursor-pointer"
-                unoptimized
               />
             </Link>
             <div className="max-w-[90px] w-full h-[35px]  items-center hidden absolute bottom-0 left-[80px]   group-hover:flex justify-center ">

@@ -56,7 +56,6 @@ const dispatch=useDispatch<AppDispatch>()
             width={168}
             height={168}
             className="w-[90%] h-[95%] sm:w-[250px] sm:h-[250px]  cursor-pointer"
-            unoptimized
           />
         </Link>
         <div onClick={likeProduct} className="sm:hidden absolute cursor-pointer top-0 right-0">
