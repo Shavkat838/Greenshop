@@ -83,10 +83,10 @@ const dispatch=useDispatch<AppDispatch>()
           </div>
         </div>
       </div>
-      <p className="max-w-auto w-full text-[15px] sm:text-[16px] leading-[16px] font-normal text-[#3D3D3D] mt-[12px]">
+      <p className="max-w-auto w-full text-[15px] sm:text-[16px] leading-[16px] font-normal text-[#3D3D3D] mt-[10px]  sm:mt-[12px]">
         {name}
       </p>
-      <p className=" text-[16px] sm:text-[18px] leading-[16px] font-semibold text-[#46A358] mt-[10px]">
+      <p className=" text-[16px] sm:text-[18px] leading-[16px] font-semibold text-[#46A358] mt-[5px] sm:mt-[10px]">
         {price}$
       </p>
     </div>
