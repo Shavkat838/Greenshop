@@ -40,7 +40,7 @@ if(role===null){
 
 function checkUser(){
   if(userPage.includes(pathname)){
-    router.replace("/")
+    router.replace("/notfound")
     return
   }
 }

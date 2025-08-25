@@ -12,7 +12,7 @@ export default function AdminGuard({ children }:Props) {
   useEffect(() => {
     const role = localStorage.getItem("role");
     if (role !== "admin") {
-      router.push("/");
+      router.push("/notfound");
     }
   }, []);
 

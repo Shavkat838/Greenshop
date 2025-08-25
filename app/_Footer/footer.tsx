@@ -280,7 +280,7 @@ export default async function Footer() {
           </div>
         </div>
       </div>
-      <SignINModal users={users} />;
+      <SignINModal users={users} />
     </div>
   );
 }
